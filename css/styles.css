@@ -22,12 +22,17 @@
 
 .hero::before {
   display: inline-flex;
+
   content: "";
+
   position: absolute;
+
   width: 100%;
   height: 100%;
+
   top: 0;
   left: 0;
+
   background-color: var(--hero-shadow);
 }
 
@@ -37,7 +42,9 @@
   font-size: 44px;
   line-height: 1.4;
   text-transform: uppercase;
+
   width: 696px;
+
   margin: 0 auto;
 }
 
@@ -45,22 +52,27 @@
 
 .hero__button {
   color: var(--primary-white-color);
+
   background-color: var(--accent-color);
+
   border: transparent;
   border-radius: 4px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
   font-family: inherit;
+
   cursor: pointer;
+
   padding: 10px 32px;
   margin: 30px auto 0 auto;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero__button:hover,
@@ -334,6 +346,8 @@
   min-height: 581px;
   min-width: 528px;
 
+  text-align: center;
+
   background-color: var(--primary-white-color);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -342,11 +356,7 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__button_close {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+.modal-button__close {
   position: absolute;
   top: 0;
   right: 0;
@@ -363,4 +373,144 @@
   cursor: pointer;
 }
 
+.modal__cross {
+  fill: currentColor;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button__close:hover > .modal__cross,
+.modal-button__close:focus > .modal__cross {
+  color: var(--accent-color);
+}
+
+.modal__container {
+  width: 100%;
+
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.modal__title {
+  display: inline-block;
+
+  color: var(--title-text-color);
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.modal-form__item {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+
+.modal-form__item:nth-child(4) {
+  margin-bottom: 20px;
+}
+
+.modal-form__item:last-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+}
+
+.modal-form__text {
+  color: var(--primary-text-color);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  margin-right: auto;
+  margin-bottom: 4px;
+}
+
+.modal-form__area {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  padding: 12px 16px;
+
+  height: 40px;
+  resize: none;
+
+  outline: none;
+
+  transition: 250ms border-color cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form__area:hover,
+.modal-form__area:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-form__area_biggest {
+  height: 120px;
+}
+
+.modal-form__item textarea::placeholder {
+  color: var(--placeholder-color);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.modal-form__item input[type="checkbox"] {
+  margin-right: 7px;
+
+  width: 16px;
+  height: 15px;
+}
+
+.modal-form__terms {
+  color: var(--primary-text-color);
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.modal-form__link {
+  color: var(--accent-color);
+}
+
+.modal-button__submit {
+  color: var(--primary-white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  background-color: var(--accent-color);
+
+  border: transparent;
+  border-radius: 4px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  padding: 10px 52px;
+  margin-bottom: 40px;
+
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+
+  cursor: pointer;
+}
+
+.modal-button__submit:hover,
+.modal-button__submit:focus {
+  transform: scale(1.1);
+}
 /* ... */

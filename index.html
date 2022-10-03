@@ -414,17 +414,78 @@
     </footer>
     <div data-modal class="backdrop backdrop__hidden">
       <div class="modal">
-        <button
-          data-modal-close
-          aria-label="Закрити"
-          class="modal__button_close"
-        >
-          <svg class="modal__cross" width="11" height="11">
-            <use href="./images/sprite.svg#cross"></use>
-          </svg>
-        </button>
+        <div class="modal__container">
+          <button
+            data-modal-close
+            aria-label="Закрити"
+            class="modal-button__close"
+          >
+            <svg class="modal__cross" width="11" height="11">
+              <use href="./images/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <b class="modal__title">Залиште свої дані, ми вам передзвонимо</b>
+          <form class="modal-form js-speaker-form">
+            <div class="modal-form__group">
+              <div class="modal-form__item">
+                <label class="modal-form__text" for="name">Ім'я</label>
+                <input
+                  class="modal-form__area"
+                  type="text"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div class="modal-form__item">
+                <label class="modal-form__text" for="tel">Телефон</label>
+                <input
+                  class="modal-form__area"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                />
+              </div>
+              <div class="modal-form__item">
+                <label class="modal-form__text" for="email">Пошта</label>
+                <input
+                  class="modal-form__area"
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div class="modal-form__item">
+                <label class="modal-form__text" for="comment">Коментар</label>
+                <textarea
+                  class="modal-form__area modal-form__area_biggest"
+                  name="comment"
+                  id="comment"
+                  rows="15"
+                  placeholder="Введіть текст"
+                  minlength="40"
+                ></textarea>
+              </div>
+              <div class="modal-form__item">
+                <input
+                  class="modal-form__checkbox"
+                  type="checkbox"
+                  name="checkbox"
+                  id="checkbox"
+                />
+                <label class="modal-form__terms" for="checkbox">
+                  Погоджуюся з розсилкою та приймаю
+                  <a href="./" class="modal-form__link">Умови договору</a>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="modal-button__submit">
+              Відправити
+            </button>
+          </form>
+        </div>
       </div>
     </div>
+    <script src="./js/speaker.js"></script>
     <!-- <script src="./js/paddingforbody.js"></script> -->
     <script src="./js/modal.js"></script>
   </body>
