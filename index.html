@@ -459,6 +459,7 @@
                   type="text"
                   name="name"
                   id="name"
+                  autocomplete="off"
                 />
                 <label class="modal-form__label" for="name">Ім'я</label>
                 <svg class="modal-form__icon" width="18" height="18">
@@ -471,6 +472,8 @@
                   type="tel"
                   name="tel"
                   id="tel"
+                  autofill="off"
+                  autocomplete="off"
                 />
                 <label class="modal-form__label" for="tel">Телефон</label>
                 <svg class="modal-form__icon" width="18" height="18">
@@ -483,6 +486,7 @@
                   type="email"
                   name="email"
                   id="email"
+                  autocomplete="off"
                 />
                 <label class="modal-form__label" for="email">Пошта</label>
                 <svg class="modal-form__icon" width="18" height="18">
@@ -498,6 +502,7 @@
                   rows="15"
                   placeholder="Введіть текст"
                   minlength="40"
+                  autocomplete="off"
                 ></textarea>
               </div>
               <div class="modal-form__item">
@@ -507,8 +512,12 @@
                     name="checkbox"
                     class="modal-form__checkbox"
                   />
-                  <span class="modal-form__checkbox-icon"></span>
-                  Погоджуюся з розсилкою та приймаю
+                  <span class="modal-form__checkbox-icon"
+                    ><svg class="modal-form__icon-check" width="13" height="13">
+                      <use href="./images/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  Погоджуюся з розсилкою та приймаю&nbsp
                   <a href="./" class="modal-form__link">Умови договору</a>
                 </label>
               </div>
